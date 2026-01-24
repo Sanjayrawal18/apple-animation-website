@@ -11,7 +11,7 @@ import { useMediaQuery } from "react-responsive";
 const ProductViewer = () => {
   const { color, scale, setColor, setScale } = useMacbookStore();
 
-  const isMobile = useMediaQuery({ query: '(max-width: 1024px)'});
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
     <section id="product-viewer">
@@ -69,7 +69,10 @@ const ProductViewer = () => {
         camera={{ position: [0, 2, 5], fov: 50, near: 0.1, far: 100 }}
       >
         <StudioLights />
-        <ModelSwitcher scale={isMobile ? scale - 0.03 : scale} isMobile={isMobile} />
+        <ModelSwitcher
+          scale={isMobile ? scale - 0.03 : scale}
+          isMobile={isMobile}
+        />
       </Canvas>
     </section>
   );

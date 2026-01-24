@@ -1,11 +1,11 @@
 import { useEffect, useRef, type JSX } from "react";
 
 const Hero = (): JSX.Element => {
-    const videoRef = useRef<HTMLVideoElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
-    useEffect(() => {
-        if (videoRef.current) videoRef.current.playbackRate = 2;
-    }, [])
+  useEffect(() => {
+    if (videoRef.current) videoRef.current.playbackRate = 2;
+  }, []);
 
   return (
     <section id="hero">
@@ -14,13 +14,19 @@ const Hero = (): JSX.Element => {
         <img src="/title.png" alt="MacBook Title" />
       </div>
 
-      <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline></video>
+      <video
+        ref={videoRef}
+        src="/videos/hero.mp4"
+        autoPlay
+        muted
+        playsInline
+      ></video>
 
       <button>Buy</button>
 
       <p>From $1599 or $133/mo for 12 months</p>
     </section>
-  )
-}
+  );
+};
 
 export default Hero;

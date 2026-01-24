@@ -12,7 +12,7 @@ export type MacbookStoreProps = {
   reset: () => void;
 };
 
-export type ModelSwitcherProps = { 
-    scale: number;
-    isMobile: boolean;
+export type ModelSwitcherProps = {
+  scale: number;
+  isMobile: boolean;
 };
