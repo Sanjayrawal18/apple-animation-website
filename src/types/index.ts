@@ -9,10 +9,21 @@ export type MacbookStoreProps = {
   scale: number;
   setScale: (scale: number) => void;
 
+  texture: string;
+  setTexture: (texture: string) => void;
+
   reset: () => void;
 };
 
 export type ModelSwitcherProps = {
   scale: number;
   isMobile: boolean;
+};
+
+export type Features = {
+  id: number;
+  icon: string;
+  highlight: string;
+  text: string;
+  styles: string;
 };
