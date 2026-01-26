@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useRef, type JSX } from "react";
 
-import { type Group } from 'three'
+import { type Group } from "three";
 import { Canvas } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import StudioLights from "./three/StudioLights";
@@ -67,7 +67,7 @@ const ModelScroll = () => {
 
     timeline
       .call(() => setTexture("/videos/feature-1.mp4"))
-      .to(".box1", { opacity: 1, y: 0 })
+      .to(".box1", { opacity: 1, y: 0, delay: 1 })
 
       .call(() => setTexture("/videos/feature-2.mp4"))
       .to(".box2", { opacity: 1, y: 0 })
@@ -110,12 +110,13 @@ const Features = () => {
       <div className="absolute inset-0">
         {features.map(
           (feature: Features, index: number): JSX.Element => (
-            <div className={clsx("box", `box${index + 1}`, feature.styles)}>
+            <div
+              key={index}
+              className={clsx("box", `box${index + 1}`, feature.styles)}
+            >
               <img src={feature.icon} alt={feature.highlight} />
               <p>
-                <span className="text-white">
-                  {feature.highlight}
-                </span>
+                <span className="text-white">{feature.highlight}</span>
                 {feature.text}
               </p>
             </div>
