@@ -9,7 +9,7 @@ import Macbook from "../components/models/Macbook";
 import { useMediaQuery } from "react-responsive";
 import clsx from "clsx";
 
-import type { Features } from "../types";
+import type { FeaturesProps } from "../types";
 import { features, featureSequence } from "../constant";
 
 import { useGSAP } from "@gsap/react";
@@ -109,7 +109,7 @@ const Features = () => {
 
       <div className="absolute inset-0">
         {features.map(
-          (feature: Features, index: number): JSX.Element => (
+          (feature: FeaturesProps, index: number): JSX.Element => (
             <div
               key={index}
               className={clsx("box", `box${index + 1}`, feature.styles)}

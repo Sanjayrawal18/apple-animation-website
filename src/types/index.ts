@@ -20,7 +20,7 @@ export type ModelSwitcherProps = {
   isMobile: boolean;
 };
 
-export type Features = {
+export type FeaturesProps = {
   id: number;
   icon: string;
   highlight: string;

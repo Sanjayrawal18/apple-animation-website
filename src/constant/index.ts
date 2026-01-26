@@ -1,4 +1,4 @@
-import type { Features, NavLinksProps } from "../types";
+import type { FeaturesProps, NavLinksProps } from "../types";
 
 const navLinks: NavLinksProps[] = [
   { label: "Store" },
@@ -76,7 +76,7 @@ const performanceImgPositions = [
   },
 ];
 
-const features: Features[] = [
+const features: FeaturesProps[] = [
   {
     id: 1,
     icon: "/feature-icon1.svg",
